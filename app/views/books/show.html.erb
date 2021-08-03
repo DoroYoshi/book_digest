@@ -1,10 +1,21 @@
 <div class="col-md-10 offset-md-1 mt-5">
-  <h2><%= @book.title %></h2>
-  <ul>
-    <li><b><%= t '.price' %>: </b><%= t('.price_yen', price: (number_with_delimiter @book.price)) %></li>
-    <li><b><%= t 'read_date' %>: </b><%= @book.read_date %></li>
-  </ul>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <% if @book.image.attached? %>
+        <%= image_tag @book.image.variant(resize: "300x300"), class: "img-thumbnail" %>
+      <% else %>
+        <%= image_tag "no_image.png", class: "img-thumbnail" %>
+      <% end %>
+    </div>
+    <div class="col-md-8">
+      <h2><%= @book.title %></h2>
+      <ul>
+        <li><b><%= t '.price' %>: </b><%= t(".price_yen", price: (number_with_delimiter @book.price)) %></li>
+        <li><b><%= t '.read_date' %>: </b><%= @book.read_date %></li>
+      </ul>
+      <h4><%= t '.description' %></h4>
+      <%= simple_format @book.description %>
+    </div>
+  </div>
   <hr>
-  <h4><%= t '.description' %></h4>
-  <%= simple_format @book.description %>
 </div>

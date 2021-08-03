@@ -6,6 +6,8 @@ ja:
     attributes:
       book:
         title: タイトル
+        new_image: 画像
+        image: 画像
         price: 価格
         read_date: 読了日
         description: 詳細
