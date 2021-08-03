@@ -7,3 +7,7 @@ ja:
       price_yen: "¥%{price}"
       read_date: 読了日
       description: 商品の説明
+      edit: 編集
+      return: もどる
+    edit:
+      title: 本の更新

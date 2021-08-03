@@ -20,6 +20,19 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
   end
 
+  def edit
+    @book = Book.find(params[:id])
+  end
+
+  def update
+    @book = Book.find(params[:id])
+    if @book.update(book_params)
+      redirect_to @book, notice: "更新完了"
+    else
+      render :edit
+    end
+  end
+
   private
 
   def book_params
