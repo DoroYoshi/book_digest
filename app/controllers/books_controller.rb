@@ -13,6 +13,10 @@ class BooksController < ApplicationController
     redirect_to @book, notice: "本を登録完了"
   end
 
+  def show
+    @book = Book.find(params[:id])
+  end
+
   private
 
   def book_params
