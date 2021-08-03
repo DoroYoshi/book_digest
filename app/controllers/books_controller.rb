@@ -9,8 +9,11 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-    @book.save
-    redirect_to @book, notice: "本を登録完了"
+    if @book.save
+      redirect_to @book, notice: "本を登録完了"
+    else
+      render :new
+    end
   end
 
   def show
