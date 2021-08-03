@@ -16,3 +16,5 @@ ja:
       cancel: キャンセル
     edit:
       title: 本の更新
+    index:
+      price_yen: "¥%{price}"
