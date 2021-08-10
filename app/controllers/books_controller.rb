@@ -1,11 +1,12 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: [:show, :edit, :update, :destroy]
+  before_action :set_book, only: [:edit, :update, :destroy]
 
   def index
-    @books = Book.page(params[:page]).per(5)
+    @books = Book.with_attached_image.page(params[:page]).per(5)
   end
 
   def show
+    @book = Book.with_attached_image.includes(:users).find(params[:id])
   end
 
   def new
