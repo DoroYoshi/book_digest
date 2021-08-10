@@ -19,6 +19,7 @@ ja:
       question_book: "%{book}を削除しますか？"
       delete_action: 削除する
       cancel: キャンセル
+      review_new: レビューを投稿
     index:
       price: 価格
       price_yen: "¥%{price}"

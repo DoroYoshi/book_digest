@@ -17,6 +17,9 @@
   <hr>
   <%= link_to t(".edit"), edit_book_path(@book), class: "btn btn-primary" %>
   <%= button_tag t(".delete"), class: "btn btn-warning", data: { toggle: "modal", target: "#delete-book" } %>
+  <% if user_signed_in? %>
+    <%= link_to t(".review_new"), new_book_review_path(@book), class: "btn btn-info" %>
+  <% end %>
   <%= link_to t(".return"), books_path, class: "btn btn-secondary" %>
 </div>
 
