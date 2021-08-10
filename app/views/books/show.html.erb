@@ -8,7 +8,7 @@
       <ul>
         <li><b><%= t '.price' %>: </b><%= t(".price_yen", price: (number_with_delimiter @book.price)) %></li>
         <li><b><%= t '.read_date' %>: </b><%= @book.read_date %></li>
-        <li><b><%= t ".category" %>: </b><%= @book.category&.name %></li>
+        <li><b><%= t '.category' %>: </b><%= @book.category&.name %></li>
       </ul>
       <h4><%= t '.description' %></h4>
       <%= simple_format @book.description %>
@@ -33,7 +33,7 @@
         <p><%= t(".question_book", book: @book.title) %></p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal"><%= t(".chancel") %></button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><%= t(".cancel") %></button>
         <%= link_to t(".delete_action"), book_path(@book), method: :delete, class: "btn btn-danger" %>
       </div>
     </div>

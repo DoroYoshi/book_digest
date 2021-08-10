@@ -2,10 +2,15 @@ ja:
   books:
     new:
       title: 本の登録
+    edit:
+      title: 本の更新
+    form:
+      include_blank: カテゴリーを選択して下さい
     show:
       price: 価格
       price_yen: "¥%{price}"
       read_date: 読了日
+      category: カテゴリー
       description: 商品の説明
       edit: 編集
       return: もどる
@@ -14,10 +19,6 @@ ja:
       question_book: "%{book}を削除しますか？"
       delete_action: 削除する
       cancel: キャンセル
-      category: カテゴリー
-    edit:
-      title: 本の更新
     index:
+      price: 価格
       price_yen: "¥%{price}"
-    form:
-      include_blank: カテゴリーを選択して下さい
